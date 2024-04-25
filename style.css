@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: hidden;
+}
+.grid-wrapper {
+  will-change: auto;
+}
+.grid-wrapper > div {
+  @apply absolute border border-gray-50 origin-center bg-white aspect-square text-3xl box-border p-2 text-3xl;
+  min-width: 240px;
+  will-change: auto;
+}
+.grid-wrapper > div > img:only-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.grid-wrapper > div aside {
+  @apply flex flex-col pl-8 font-semibold text-gray-700;
+}
+
+.grid-wrapper > div aside > span {
+  @apply leading-tight;
+}
+
+.grid-wrapper > div aside > span:first-child {
+  @apply text-gray-500 text-xs;
+}
+
+.grid-wrapper > div aside > span:last-child {
+  @apply text-xs;
+}
